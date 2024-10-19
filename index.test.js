@@ -7,3 +7,9 @@ describe("getSumOfStr", () => {
     expect(response).toBe(0);
   });
 });
+
+test("returns the number for a single input", () => {
+  const str = "1";
+  const response = getSumOfStr(str);
+  expect(response).toBe(1);
+});
