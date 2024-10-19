@@ -19,3 +19,15 @@ test("returns the sum for comma-separated numbers", () => {
   const response = getSumOfStr(str);
   expect(response).toBe(6);
 });
+
+test("returns the sum for newline and comma-separated numbers", () => {
+  const str = "1\n2,3";
+  const response = getSumOfStr(str);
+  expect(response).toBe(6);
+});
+
+test("handles custom delimiters", () => {
+  const str = "//;\n1;2";
+  const response = getSumOfStr(str);
+  expect(response).toBe(3);
+});
