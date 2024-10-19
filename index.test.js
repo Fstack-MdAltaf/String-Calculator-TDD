@@ -31,3 +31,9 @@ test("handles custom delimiters", () => {
   const response = getSumOfStr(str);
   expect(response).toBe(3);
 });
+
+test("throws an error for negative numbers", () => {
+  const str = "1,-5";
+  const response = getSumOfStr(str);
+  expect(response).toEqual(new Error("Negative numbers not allowed: -5"));
+});
