@@ -13,3 +13,9 @@ test("returns the number for a single input", () => {
   const response = getSumOfStr(str);
   expect(response).toBe(1);
 });
+
+test("returns the sum for comma-separated numbers", () => {
+  const str = "1,5";
+  const response = getSumOfStr(str);
+  expect(response).toBe(6);
+});

@@ -5,9 +5,14 @@ const getSumOfStr = (str) => {
   const cleanedStr = str.replace(/[^\d,-]/g, "");
   const numbers = cleanedStr.split(/[,|\n]/);
 
-  if (numbers.length === 1 && !isNaN(Number(numbers[0]))) {
-    return Number(numbers[0]);
+  for (const item of numbers) {
+    const number = Number(item);
+
+    if (number > 0) {
+      sum += number;
+    }
   }
+  return sum;
 };
 
 module.exports = getSumOfStr;
