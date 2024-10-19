@@ -9,15 +9,15 @@ Throws an error when negative numbers are present, listing them in the error mes
 
 Installation
 1.Clone the repository:
-git clone <repository-url>
-cd string-calculator
+git clone [<repository-url>](https://github.com/Fstack-MdAltaf/String-Calculator-TDD)
+cd String-Calculator-TDD
 
 2.Install the dependencies:
 npm install
 
 3.Usage
 You can use the add function to calculate the sum of numbers in a string. Here's an example:
-const getSumOfStr = require("./index"); 
+const getSumOfStr = require("./index");
 
 console.log(getSumOfStr("1,2,3")); // Output: 6
 console.log(getSumOfStr("1\n2,3")); // Output: 6
@@ -49,17 +49,9 @@ expect(add("//;\n1;2")).toBe(3);
 6.Should throw an error with a list of negative numbers if negatives are present
 expect(() => add("1,-2,3,-4")).toThrow("Negatives not allowed: -2, -4");
 
-
 File Structure
 The project contains the following files:
 
 index.js: The implementation of the String Calculator.
 index.test.js: The Jest test cases for the String Calculator.
 package.json: Contains the project dependencies and Jest configuration.
-
-
-
-
-
-
-
